@@ -1,5 +1,5 @@
 # DNSconfig
-Generic optimal DNS configuration. (Be mindful of the reversed ip address)
+Generic optimal DNS configuration. (Be mindful of the reversed arpa ip address)
 
 
             Raw AXFR output
@@ -11,19 +11,19 @@ Generic optimal DNS configuration. (Be mindful of the reversed ip address)
                       7200		;retry
                       3600000	;expire
                       86400	)	;minimum
-            domain.tld.	28800	IN	A	1.0.0.127
+            domain.tld.	28800	IN	A	127.0.0.1
             domain.tld.	28800	IN	NS	ns1.dns.tld.
             domain.tld.	28800	IN	NS	ns2.dns.tld.
             domain.tld.	28800	IN	NS	ns3.dns.tld.
             domain.tld.	28800	IN	NS	ns4.dns.tld.
             domain.tld.	28800	IN	NS	ns5.dns.tld.
-            domain.tld.	28800	IN	SPF	"domain.tld IN TXT v=spf1 ip4:1.0.0.127 a:hostmaster.dns.tld"
+            domain.tld.	28800	IN	SPF	"domain.tld IN TXT v=spf1 ip4:127.0.0.1 a:hostmaster.dns.tld"
             domain.tld.	172800	IN	TXT	google-site-verification=XXXXXXXXXXXXXX
-            domain.tld.	14400	IN	TXT	"v=spf1 +a +mx +ip4:1.0.0.127 ~all"
+            domain.tld.	14400	IN	TXT	"v=spf1 +a +mx +ip4:127.0.0.1 ~all"
             mail.domain.tld.	14400	IN	CNAME	domain.tld.
             mail.domain.tld.	14400	IN	MX	10 domain.tld.
-            mail.domain.tld.	86400	IN	PTR	127.0.0.1.in-addr.arpa.
+            mail.domain.tld.	86400	IN	PTR	1.0.0.127.in-addr.arpa.
             mx.domain.tld.	14400	IN	MX	10 domain.tld.
-            spf.domain.tld.	86400	IN	TXT	"domain.tld  IN TXT v=spf1 ip4:1.0.0.127 a:hostmaster.dns.tld"
-            www.domain.tld.	28800	IN	A	1.0.0.127
+            spf.domain.tld.	86400	IN	TXT	"domain.tld  IN TXT v=spf1 ip4:127.0.0.1 a:hostmaster.dns.tld"
+            www.domain.tld.	28800	IN	A	127.0.0.1
             _dmarc.domain.tld.	86400	IN	TXT	"v=DMARC1; p=none; rua=mailto:info@domain.tld;"
