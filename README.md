@@ -1,0 +1,2 @@
+# DNSconfig
+DNS configuration
