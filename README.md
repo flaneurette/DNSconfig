@@ -1,5 +1,5 @@
 # DNSconfig
-Generic DNS configuration. (Be mindful of the reversed arpa address, which the reverse IP)
+Generic DNS configuration. (Be mindful of the reversed arpa address, which reverses the IP)
 
 
             Raw AXFR output
